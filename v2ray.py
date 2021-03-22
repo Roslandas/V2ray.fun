@@ -29,18 +29,18 @@ if __name__ == '__main__':
     data_file = open("/usr/local/V2ray.Fun/panel.config","r")
     data = json.loads(data_file.read())
     data_file.close()
-    print("Bienvenido a V2ray panel - OFC BY DANKELTHAHER\n")
-    print("nombre de usuario actual del panel：" + str(data['username']))
-    print("Contrasena actual del panel：" + str(data['password']))
-    print("Puerto del panel actual：" + str(data['port']))
-    print("Por favor ingrese la funcion de seleccion de numeros：\n")
-    print("1. Inicio del Panel")
-    print("2. Detener el Panel")
-    print("3. Reiniciar el panel")
-    print("4. Restablecer el nombre de usuario y la contrasena del panel")
-    print("5. Establecer estado del Panel SSL")
-    print("6. Configuracion del puerto del panel")
-    choice = str(input("\nSeleccione una opcion："))
+    print("Sveiki atvyke i V2ray panele - BY Rolka\n")
+    print("dabartinis skydelio vartotojo vardas：" + str(data['username']))
+    print("Dabartinis skydelio slaptazodis：" + str(data['password']))
+    print("Dabartinis skydo prievadas：" + str(data['port']))
+    print("Iveskite skaiciu pasirinkimo funkcija：\n")
+    print("1. Pagrindinis skydelis")
+    print("2. Sutabdyti skydelis")
+    print("3. Is naujo paleiskite skyda")
+    print("4. Is naujo nustatykite vartotojo varda ir skydelio slaptazodi")
+    print("5. Nustatykite SSL skydelio busena")
+    print("6. Skydo konfiguracija")
+    choice = str(input("\nPasirinkite parinkti："))
 
     if choice == "1":
         start()
@@ -67,9 +67,9 @@ if __name__ == '__main__':
         print("La contrasena del nombre de usuario se establecio correctamente!！")
     elif choice == "5":
         print("Sugerencia: la funcionalidad SSL del panel solo funcionara si la función V2ray TLS esta habilitada en el panel\n")
-        print("1. Abrir la función SSL del panel")
-        print("2. Desactivar la funcionalidad SSL del panel")
-        ssl_choice = str(input("seleccione una opcion："))
+        print("1. Atidarykite SSL skydelio funkcija")
+        print("2. Isjungti skydo SSL funkcionaluma")
+        ssl_choice = str(input("Pasirinkite parinkti："))
 
         if ssl_choice == "1":
             data['use_ssl'] = "on"

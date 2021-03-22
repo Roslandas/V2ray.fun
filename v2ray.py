@@ -45,28 +45,28 @@ if __name__ == '__main__':
     if choice == "1":
         start()
         open_port(data['port'])
-        print("Inicio exitoso!")
+        print("Sekminga pradzia!")
 
     elif choice == "2":
         stop()
-        print("detencion exitosa！")
+        print("sekmingas arestas！")
 
     elif choice == "3":
         stop()
         start()
         open_port(data['port'])
-        print("El reinicio es exitoso!")
+        print("Paleisti is naujo pavyko!")
     elif choice == "4":
-        new_username = str(raw_input("Por favor ingrese un nuevo nombre de usuario："))
-        new_password = str(raw_input("Por favor ingrese una nueva contrasena："))
+        new_username = str(raw_input("Iveskite nauja vartotojo varda："))
+        new_password = str(raw_input("Iveskite nauja slaptazodi："))
         data['username'] = new_username
         data['password'] = new_password
         write(data)
         stop()
         start()
-        print("La contrasena del nombre de usuario se establecio correctamente!！")
+        print("Vartotojo vardas buvo nustatytas teisingai!！")
     elif choice == "5":
-        print("Sugerencia: la funcionalidad SSL del panel solo funcionara si la función V2ray TLS esta habilitada en el panel\n")
+        print("Patarimas: SSL skydelio funkcija veiks tik tuo atveju, jei skydelyje ijungta V2ray TLS funkcija\n")
         print("1. Atidarykite SSL skydelio funkcija")
         print("2. Isjungti skydo SSL funkcionaluma")
         ssl_choice = str(input("Pasirinkite parinkti："))
@@ -76,19 +76,19 @@ if __name__ == '__main__':
             write(data)
             stop()
             start()
-            print("Panel SSL está activado!")
+            print("SSL skydelis igalintas!")
         else:
             data['use_ssl'] = "off"
             write(data)
             stop()
             start()
-            print("Panel SSL esta desactivado!")
+            print("Skydelio SSL yra isjungtas!")
     elif choice == "6":
-        new_port = input("Por favor ingrese un nuevo puerto de panel：")
+        new_port = input("Iveskite nauja skydelio prievada：")
         data['port'] = int(new_port)
         write(data)
         stop()
         start()
         open_port(data['port'])
-        print("El puerto del panel ha sido modificado!")
+        print("Skydo prievadas modifikuotas!")
         
